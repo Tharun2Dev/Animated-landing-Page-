@@ -1,0 +1,408 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+                
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: white;
+}
+.cursor{
+    height: 25px;
+    width: 25px;
+    background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+.cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #96c11e52;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+  
+}
+.nav{
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 65px;
+    gap: 17px;
+    position: fixed;
+    z-index: 11;
+}
+.nav img{
+    height: 75px;
+    /* width: 80px; */
+}
+.nav h4{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.nav h4:hover{
+    color: #000;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    
+    
+}
+.page1 h1{
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+}
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 1.5px #95c11e;
+    z-index: -1;
+}
+.page1 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.page1 p{
+    font-size: 16px;
+    font-weight: 400;
+    width: 40%;
+}
+
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+.scroller{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+}
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite 
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin-right: 10px;
+    color: transparent;
+    transition: all 0.57s linear;
+    -webkit-text-stroke: 2px #95c11e;
+}
+.scroller h4:hover{
+    color: #95c11e;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
+
+.about-us{
+  
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.about-us img{
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-info{
+    text-align: center;
+    width: 50%;
+}
+
+.about-info h3{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.about-info p{
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.cards-container{
+    height: 60vh;
+    width: 100%;
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.card{
+    height: 80%;
+    width: 22%;
+   position: relative;
+   z-index: 10;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all 0.6s ease;
+   
+}
+
+#card1{
+    background-image: url(./images/card1.jpg);
+}
+#card2{
+    background-image: url(./images/card2.jpg);
+}
+#card3{
+    background-image: url(./images/card3.jpg);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 120px;
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+.overlay h4{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+.overlay p{
+    color: black;
+    text-align: center;
+}
+
+#green-div{
+    margin-top: 23px;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left bottom,#119f3a, #ace022)
+}
+#green-div h4{
+    font-size: 25px;
+    width: 45%;
+    text-transform: uppercase;
+    line-height: 33px;
+    color: black;
+    text-align: center;
+   
+
+}
+#green-div img{
+    height: 100%;
+    width: 6%;
+    object-fit: cover;
+
+}
+.page3{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.page3 p{
+    font-size: 26px;
+    font-weight: 700;
+    width: 55%;
+    line-height: 45px;
+    text-align: center;
+
+}
+.page3 img{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+
+}
+.page3 #colon1{
+    left: 20%;
+    top:30%;
+}
+.page3 #colon2{
+    right: 20%;
+    bottom:33%;
+}
+
+.page4 {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+  }
+  .elem {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+   
+  }
+  .elem h2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #000;
+    font-weight: 800;
+    background-color: #95c11e;
+    transition: all 1s ease;
+
+  }
+  .elem h2:hover{
+    background-color: transparent;
+    color: white;
+  }
+  .elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page4 h1{
+    text-align: center;
+    font-size: 97px;
+    position: absolute;
+    top: -22%;
+    font-weight: 900;
+    color: black;
+    font-family:'Gilroy-Bold', sans-serif;
+    -webkit-text-stroke:2px white;
+  }
+  .footer{
+    height: 30vh;
+    width: 100%;
+   background: linear-gradient(to left bottom,#119f3a, #ace022);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+  }
+  .imgFoot{
+    width: 18%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+  }
+  .imgFoot img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 23px;
+
+  }
+  .dtFoot{
+    margin-left: 40px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .dtFoot  h4{
+    font-size: 23px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 40px;
+  }
+  .address p{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 40px;
+    color: #000;
+
+
+  }
+  .address h4{
+    font-weight: 800;
+    font-size: 23px;
+color: #000;
+margin-left: 40px;
+  }
